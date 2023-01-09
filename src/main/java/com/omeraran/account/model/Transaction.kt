@@ -1,6 +1,6 @@
 package com.omeraran.account.model
 
-import jakarta.persistence.*
+import javax.persistence.*
 import org.hibernate.annotations.GenericGenerator
 import java.math.BigDecimal
 import java.time.LocalDateTime
@@ -18,7 +18,7 @@ data class Transaction(
 
         @ManyToOne(fetch = FetchType.LAZY, optional = false, cascade = [CascadeType.ALL])
         @JoinColumn(name = "account_id", nullable = false)
-        val account : Account,
+        val account : Account
 
 
 ){
