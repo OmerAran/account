@@ -22,6 +22,14 @@ data class Transaction(
 
 
 ){
+        constructor(account: Account, amount: BigDecimal) : this(
+                id = null,
+                amount = amount,
+                transactionDate = LocalDateTime.now(),
+                transactionType = TransactionType.INITIAL,
+                account = account,
+
+        )
         override fun equals(other: Any?): Boolean {
                 if (this === other) return true
                 if (javaClass != other?.javaClass) return false
