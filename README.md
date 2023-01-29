@@ -36,7 +36,24 @@ I have experienced RestAPI development, how to work with relationships between e
   }
 ```
 
+| Parameter       | Type                      | Description         |
+|:----------------|:--------------------------|:--------------------|
+| `Authorization` | `InMemory Authentication` | **Admin and User**. |
 
+```http
+  Basic Auth: Get Customer By Id 
+  {
+  "username" : "user",
+  "password" : "password"
+  }
+```
+```http
+  Basic Auth: Create Account Request
+  {
+  "username" : "admin",
+  "password" : "password"
+  }
+```
 
 ## Lessons Learned
 
@@ -45,10 +62,11 @@ I have experienced RestAPI development, how to work with relationships between e
 - Unit Testing
 - InMemory Database
 - Exception Handling and Validation (with default messages)
+- InMemory Basic Authentication
 
 ## Tech Stack
 
-**Server:** Java 11, Spring Boot
+**Server:** Java 11, Spring Boot, Spring Basic Authentication
 
 **Client:** React - not added yet.
 
